@@ -10,7 +10,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="customer-sapi-apiFlow" doc:id="4e837972-4f11-4422-89ad-5d0139a4657b" >
 		<http:listener doc:name="Listener" doc:id="d236fa5d-e28a-42ed-bf61-ed3f6f6fed34" config-ref="HTTP_Listener_config" path="/mule"/>
-		<logger level="INFO" doc:name="Logger" doc:id="23fa62a9-0186-45dd-ba97-9e497a31192b" message='#["starting of the flow"]'/>
 		<ee:transform doc:name="Transform Message" doc:id="4930abaa-1c9b-40d9-9508-79130b3df09b" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
